@@ -1,0 +1,83 @@
+.containerBest {
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.containerBestItem {
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    max-width: 1000px;
+
+}
+
+.item {
+ background: white;
+    height: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+}
+
+.deleteButton {
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: none;
+    margin-left: 30px;
+    flex-direction: row;
+    margin-top: 290px!important;
+
+
+}
+
+.item img {
+    width: auto;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name {
+
+    font-size: 20px;
+    color: black;
+    padding-top: 250px;
+     max-height: 100px;
+   height: 150px;
+   max-width: 250px;
+    position: absolute;
+   word-wrap: break-word;
+}
+
+
+
+.desc{
+   max-height: 200px;
+   height: 150px;
+
+     padding-top: 300px;
+
+   height: 150px;
+   max-width: 250px;
+position: absolute;
+   word-wrap: break-word;
+}
+
+
+
+
+#create-inputName{
+    background-color: orange;
+    height: 1000px;
+}
+
+

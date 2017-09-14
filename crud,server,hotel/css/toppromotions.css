@@ -1,0 +1,23 @@
+.containerTop {
+    display: flex;
+    flex-flow: row;
+    box-sizing: border-box;
+    max-width: 1000px;
+    flex-wrap: wrap;
+}
+
+.item {
+
+    height: 500px;
+    min-width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    display: flex;
+}
+
+.deleteButton {
+    border-radius: 30px;
+}
+
+.editButton {}

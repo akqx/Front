@@ -1,0 +1,154 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #777;
+    width:100%;
+    overflow-x:hidden;
+
+}
+
+ul
+{
+list-style-type: none;
+}
+
+#weather > ul > li{
+    display:none;
+}
+
+#weather > h2 > i{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    margin-top: -140px;
+}
+
+#weather > h2 {
+    padding: 20px;
+    margin-top: 140px;
+}
+
+
+.infText {
+    color: black;
+    font-style: light;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.addImage {
+    margin-top: 30px;
+}
+
+form {
+    color: black;
+    margin-top: 30px;
+}
+
+input {
+    margin-bottom: 30px;
+    width: 300px;
+    height: 50px;
+}
+
+.price {
+    width: 150px;
+    height: 25px;
+}
+
+.stars {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border: 1px solid;
+    border-radius: 50%;
+    margin: 10px 0 10px 10px;
+    color: grey;
+}
+
+#ulStars {
+    padding: 0px;
+}
+
+.pic {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo_flickr {
+    align-items: center;
+    margin-left: 60px;
+    width: 150px;
+    height: 200px;
+    margin-bottom: 60px;
+    margin-right: 60px;
+    padding: 40px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.conteinerInf {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.button {
+    /* Green */
+    border: none;
+    color: white;
+    width: 300px;
+    height: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 10px;
+    margin: 30px;
+    vertical-align: middle;
+}
+
+#bestHotelsB {
+    background-color: #f2a71a;
+ 
+}
+
+#topPromotionsB {
+    background-color: #3e1e45;
+    vertical-align: middle;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 200px;
+    flex-wrap: wrap;
+}
+
+.topPromotionsD {
+    margin-top: 13px;
+    float: left;
+    margin-left: 50px;
+}
+
+.bestHotelsD {
+    margin-top: 13px;
+    float: left;
+    margin-left: 85px;
+}
+
+#logo img {
+    max-width: 300px;
+    width: 100%;
+}
+
+.plusClick img {
+    width: 100%;
+    max-width: 100px;
+    position: fixed;
+    right: 4em;
+    bottom: 4em;
+}
+
+.infText a {
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,13 @@
+.containerEdit {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 1;
+    margin-top: 70px;
+}

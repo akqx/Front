@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/edit.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+ 
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <div id="logo">
+            <img src="img/logo.jpg">
+        </div>
+        <div class="containerEdit">
+            <div class="flex1">
+                <div class="infText">EDIT</div>
+                <div class="addImage">Click to add image...
+                </div>
+            </div>
+            <div class="flex2">
+                <tr id="dupa">
+
+                <form>
+                    Hotel Name:
+                    <br>
+                    <input type="text" class="name"  id="nameEdit" name="name">
+                    <br> Description:
+                    <br>
+                    <input type="text" id="descEdit" name="desc">
+                    <br>Stars
+                    <br>
+                    <ul id="ulStars">
+                        <li class="stars"></li>
+                        <li class="stars"></li>
+                        <li class="stars"></li>
+                        <li class="stars"></li>
+                        <li class="stars"></li>
+                    </ul>
+                    <br> Price:
+                    <br>
+                    <input type="text" name="price"  id="priceEdit" class="price">
+                    <button id="update-buttonEdit">READ/GET hotels</button>
+                </form>
+                </tr>
+            </div>
+        </div>
+
+    </body>
+ <script src="scripts.js"></script>    
+ <script src="js/edit.js"></script>
+    </html>

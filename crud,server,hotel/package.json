@@ -1,0 +1,23 @@
+{
+  "name": "a_t",
+  "version": "1.0.0",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "echo\"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "aga",
+  "license": "ISC",
+  "dependencies": {
+    "multer": "^1.2.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  },
+    "devDependencies": {
+    "should": "~7.1.0",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
+  },
+  "description": ""
+}
