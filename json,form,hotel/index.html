@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<title>ProjectMultimedia</title>
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function() {
+
+    $("#datepickerin").datepicker();
+    $("#datepickerout").datepicker();
+});
+</script>
+
+<body>
+    <nav id="nav-3">
+        <a class="link-3" href="#first" id="gotop"><b>go to the top</b></a>
+        <a class="link-3" href="#send">send</a>
+        <a class="link-3" href="#wrtieUs">complete the form</a>
+    </nav>
+    <div class="img-1" id="first">
+        <div id="firstNav">
+            <div class="logo">HOTEL REGISTRATION</div>
+        </div>
+    </div>
+    <form action="post" method="POST" id="form">
+        <div class="logo1" id="wrtieUs">Please, complete the form</div>
+        <input type="text" id="NAME" name="name" value="NAME" onblur="if(value=='') value = id" onfocus="if(value==id) value = ''">
+        <input type="text" id="ADDRESS" name="address" value="ADDRESS" onblur="if(value=='') value = id" onfocus="if(value==id) value = ''">
+        <input type="email" id="EMAIL" name="email" value="EMAIL" onblur="if(value=='') value = id" onfocus="if(value==id) value = ''">
+        <div class="container">
+            <input type="text" name="Date in" id="datepickerin" class="conElement" value="DATE IN">
+            <input type="text" name="Date out" id="datepickerout" class="conElement" value="DATE OUT">
+        </div>
+        <textarea id="notes" name="notes" onblur="if(value=='') value = id" onfocus="if(value==id) value = ''">notes</textarea>
+        <div class="fajnie">NUMBER OF ADULTS</div>
+        <select id="adults" name="NUMER of ADULTS">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <div class="fajnie">NUMBER OF CHILDREN</div>
+        <select id="children" name="NUMBER of CHILDREN">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <div class="fajnie">NUMBER OD ROOMS</div>
+        <select id=rooms name="NUMBER of ROOMS">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <input type="text" id="credit" name="credit" value="Credit Card Number" onblur="if(value=='') value = 'Credit Card Number'" onfocus="if(value=='Credit Card Number') value = ''">
+        <div id="regime">REGIME</div>
+        <group class="inline-radio">
+            <div>
+                <input type="radio" name="REGIME" value="IT">
+                <label>IT</label>
+            </div>
+            <div>
+                <input type="radio" name="REGIME" value="PA" checked>
+                <label>PA</label>
+            </div>
+            <div>
+                <input type="radio" name="REGIME" value="PC">
+                <label>PC</label>
+            </div>
+        </group>
+        <input type="submit" id="send" value="SEND">
+    </form>
+</body>
+<script src="server.js"></script>
+<script src="scripts.js"></script>
+
+</html>
