@@ -24,7 +24,10 @@ public class BookController {
 	    return bookRepository.findAll();
 	}
 
+	
     // Create a new book
+	//http://localhost:8080/api/books
+	//example: {"name":"name", "year":"2019","author":"author", "note":"note"} 
 	@PostMapping("/books")
 	public Book createBook(@Valid @RequestBody Book book) {
 	    return bookRepository.save(book);
