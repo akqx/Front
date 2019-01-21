@@ -12,16 +12,15 @@ public class Booksbycategory {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idbooksbycategory;
-
+	private Long idbooksbycategory;
 	private int idbook;
 	private int idcategory;
 
-	public int getIdbooksbycategory() {
+	public Long getIdbooksbycategory() {
 		return idbooksbycategory;
 	}
 
-	public void setIdbooksbycategory(int idbooksbycategory) {
+	public void setIdbooksbycategory(Long idbooksbycategory) {
 		this.idbooksbycategory = idbooksbycategory;
 	}
 

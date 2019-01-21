@@ -20,8 +20,7 @@ public class Category implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idcategory;
-
-    private String type;
+	private String type;
 
 	public Long getIdcategory() {
 		return idcategory;
@@ -38,6 +37,5 @@ public class Category implements Serializable {
 	public void setType(String type) {
 		this.type = type;
 	}
-    
-    
+
 }

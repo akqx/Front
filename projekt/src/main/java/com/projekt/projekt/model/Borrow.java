@@ -14,18 +14,17 @@ public class Borrow {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idborrow;
-
+	private Long idborrow;
 	private Date dateborrowed;
 	private Date datereturned;
 	private int iduser;
 	private int idbook;
 
-	public int getIdborrow() {
+	public Long getIdborrow() {
 		return idborrow;
 	}
 
-	public void setIdborrow(int idborrow) {
+	public void setIdborrow(Long idborrow) {
 		this.idborrow = idborrow;
 	}
 

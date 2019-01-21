@@ -20,15 +20,14 @@ public class Bookcopies {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idbookcopies;
-
+	private Long idbookcopies;
 	private int copiesnumber;
 
-	public int getIdbookcopies() {
+	public Long getIdbookcopies() {
 		return idbookcopies;
 	}
 
-	public void setIdbookcopies(int idbookcopies) {
+	public void setIdbookcopies(Long idbookcopies) {
 		this.idbookcopies = idbookcopies;
 	}
 

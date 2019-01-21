@@ -12,16 +12,15 @@ public class Userrole {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int iduserrole;
-
+	private Long iduserrole;
 	private int idrole;
 	private int iduser;
 
-	public int getIduserrole() {
+	public Long getIduserrole() {
 		return iduserrole;
 	}
 
-	public void setIduserrole(int iduserrole) {
+	public void setIduserrole(Long iduserrole) {
 		this.iduserrole = iduserrole;
 	}
 
