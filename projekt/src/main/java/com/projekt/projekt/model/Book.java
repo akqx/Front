@@ -1,4 +1,5 @@
 package com.projekt.projekt.model;
+
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import java.io.Serializable;
 import java.util.Date;
@@ -14,25 +15,23 @@ import org.springframework.data.annotation.LastModifiedDate;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name="book")
+@Table(name = "book")
 @EntityListeners(AuditingEntityListener.class)
-
 public class Book implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idbook;
-    @NotBlank(message ="{notblank.warring}")
-    @Size(min=1,max = 100, message = "{size.warring}")
-    private String name;
-    private Integer year;
-    @NotBlank(message ="{notblank.warring}")
-    @Size(min=1,max = 100, message = "{size.warring}")
-    private String author;
-    @Size(min=1,max = 1000, message = "{size.warring}")
-    private String note;
-    @Size(min=1,max = 250, message = "{size.warring}")
-    private String language;
- 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long idbook;
+	@NotBlank(message = "{notblank.warring}")
+	@Size(min = 1, max = 100, message = "{size.warring}")
+	private String name;
+	private Integer year;
+	@NotBlank(message = "{notblank.warring}")
+	@Size(min = 1, max = 100, message = "{size.warring}")
+	private String author;
+	@Size(min = 1, max = 1000, message = "{size.warring}")
+	private String note;
+	@Size(min = 1, max = 250, message = "{size.warring}")
+	private String language;
 
 	public String getLanguage() {
 		return language;
@@ -81,10 +80,5 @@ public class Book implements Serializable {
 	public void setNote(String note) {
 		this.note = note;
 	}
-
-
-
-	
-
 
 }

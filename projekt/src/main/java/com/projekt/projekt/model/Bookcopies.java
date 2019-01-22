@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +15,26 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 @Entity
 @Table(name = "bookcopies")
+@EntityListeners(AuditingEntityListener.class)
 public class Bookcopies {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idbookcopies;
 	private int copiesnumber;
+	private int idbook;
+
+	public int getIdbook() {
+		return idbook;
+	}
+
+	public void setIdbook(int idbook) {
+		this.idbook = idbook;
+	}
 
 	public Long getIdbookcopies() {
 		return idbookcopies;

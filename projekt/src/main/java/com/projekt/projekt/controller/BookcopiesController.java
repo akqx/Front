@@ -47,7 +47,8 @@ public class BookcopiesController {
 				.orElseThrow(() -> new ResourceNotFoundException("bookcopies", "id", idbookcopies));
 
 		bookcopies.setCopiesnumber(bookcopiesDetails.getCopiesnumber());
-
+		bookcopies.setIdbook(bookcopiesDetails.getIdbook());
+		
 		Bookcopies updatedbookcopies = bookcopiesRepository.save(bookcopies);
 		return updatedbookcopies;
 	}
