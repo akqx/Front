@@ -32,14 +32,14 @@ public class BookcopiesController {
 	}
 
 	// Get a Single bookcopies
-	@GetMapping("/bookcopiess/{id}")
+	@GetMapping("/bookcopies/{id}")
 	public Bookcopies getBookcopiesById(@PathVariable(value = "id") Long idbookcopies) {
 		return bookcopiesRepository.findById(idbookcopies)
 				.orElseThrow(() -> new ResourceNotFoundException("Bookcopies", "id", idbookcopies));
 	}
 
 	// Update a bookcopies
-	@PutMapping("/bookcopiess/{id}")
+	@PutMapping("/bookcopies/{id}")
 	public Bookcopies updateBookcopies(@PathVariable(value = "id") Long idbookcopies,
 			@Valid @RequestBody Bookcopies bookcopiesDetails) {
 
@@ -48,7 +48,7 @@ public class BookcopiesController {
 
 		bookcopies.setCopiesnumber(bookcopiesDetails.getCopiesnumber());
 		bookcopies.setIdbook(bookcopiesDetails.getIdbook());
-		
+
 		Bookcopies updatedbookcopies = bookcopiesRepository.save(bookcopies);
 		return updatedbookcopies;
 	}
@@ -63,4 +63,20 @@ public class BookcopiesController {
 
 		return ResponseEntity.ok().build();
 	}
+
+	// Update a bookcopies, send querty
+	@PutMapping("/bookcopies/{idBook}/{copiesnumberDiffrence}")
+	public Bookcopies updateBookcopiesSendQuerty(@PathVariable("idBook") Integer idBook,
+			@PathVariable("copiesnumberDiffrence") Integer copiesnumberDiffrence,
+			@Valid @RequestBody Bookcopies bookcopiesDetails) {
+
+		
+		Bookcopies bookcopies = bookcopiesRepository.findByidbook(idBook);
+		bookcopies.setCopiesnumber(bookcopies.updateBookCopiesDifference(copiesnumberDiffrence));
+
+		Bookcopies updatedbookcopies = bookcopiesRepository.save(bookcopies);
+		return updatedbookcopies;
+
+	}
+
 }
