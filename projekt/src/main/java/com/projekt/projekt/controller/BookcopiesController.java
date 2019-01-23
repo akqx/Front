@@ -70,13 +70,13 @@ public class BookcopiesController {
 			@PathVariable("copiesnumberDiffrence") Integer copiesnumberDiffrence,
 			@Valid @RequestBody Bookcopies bookcopiesDetails) {
 
-		
 		Bookcopies bookcopies = bookcopiesRepository.findByidbook(idBook);
-		bookcopies.setCopiesnumber(bookcopies.updateBookCopiesDifference(copiesnumberDiffrence));
+		if (bookcopies != null) {
+			bookcopies.setCopiesnumber(bookcopies.updateBookCopiesDifference(copiesnumberDiffrence));
 
-		Bookcopies updatedbookcopies = bookcopiesRepository.save(bookcopies);
-		return updatedbookcopies;
-
+			Bookcopies updatedbookcopies = bookcopiesRepository.save(bookcopies);
+			return updatedbookcopies;
+		}
+		else return bookcopies;
 	}
-
 }

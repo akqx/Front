@@ -12,10 +12,5 @@ import com.projekt.projekt.model.Bookcopies;
 public interface BookcopiesRepository extends JpaRepository<Bookcopies, Long> {
 
 	Bookcopies findByidbook(int i);
-
 	Bookcopies save(List<Bookcopies> bookcopiesList);
-
-	//@Modifying
-	//@Query("UPDATE library.bookcopies SET copiesnumber = copiesnumber + :one WHERE idbook= :two;")
-	//int updateBookCopiesDifference(@Param("one") int copiesnumberDiffrence, @Param("two") int idbook);
 }

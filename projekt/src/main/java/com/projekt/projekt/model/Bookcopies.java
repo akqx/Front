@@ -54,9 +54,11 @@ public class Bookcopies {
 
 	public int updateBookCopiesDifference(int difference) {
 		// TODO Auto-generated method stub
-		 return copiesnumber + difference;
-		
+		return copiesnumber + difference;
+
 	}
+
+
 
 	public Bookcopies orElseThrow(Object object) {
 		// TODO Auto-generated method stub
