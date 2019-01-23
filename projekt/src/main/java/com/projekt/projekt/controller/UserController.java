@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.projekt.projekt.exception.ResourceNotFoundException;
-import com.projekt.projekt.model.Book;
-import com.projekt.projekt.model.Role;
 import com.projekt.projekt.model.User;
 import com.projekt.projekt.repository.UserRepository;
 
@@ -55,6 +53,7 @@ public class UserController {
 		user.setSurname(userDetails.getSurname());
 		user.setEmail(userDetails.getEmail());
 		user.setPassword(userDetails.getPassword());
+		user.setRole(userDetails.getRole());
 
 		User updateduser = userRepository.save(user);
 		return updateduser;

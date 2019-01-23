@@ -39,7 +39,15 @@ public class User {
 	@NotBlank(message = "{notblank.warring}")
 	@Size(min = 3, max = 45, message = "{size.warring}")
 	private String password;
+	private String role;
 
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public Long getIduser() {
 		return iduser;

@@ -32,6 +32,15 @@ public class Book implements Serializable {
 	private String note;
 	@Size(min = 1, max = 250, message = "{size.warring}")
 	private String language;
+	private Integer copies;
+
+	public Integer getCopies() {
+		return copies;
+	}
+
+	public void setCopies(Integer copies) {
+		this.copies = copies;
+	}
 
 	public String getLanguage() {
 		return language;

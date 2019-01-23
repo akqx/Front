@@ -27,7 +27,7 @@ public class BookController {
 	// Create a new book
 	// http://localhost:8080/api/books
 	// example: {"name":"name", "year":"2019","author":"author", "note":"note",
-	// "language":"language"}
+	// "language":"language","copies":"4"}
 	@PostMapping("/books")
 	public Book createBook(@Valid @RequestBody Book book) {
 		return bookRepository.save(book);
@@ -51,6 +51,7 @@ public class BookController {
 		book.setNote(bookDetails.getNote());
 		book.setYear(bookDetails.getYear());
 		book.setLanguage(bookDetails.getLanguage());
+		book.setCopies(bookDetails.getCopies());
 
 		Book updatedbook = bookRepository.save(book);
 		return updatedbook;
