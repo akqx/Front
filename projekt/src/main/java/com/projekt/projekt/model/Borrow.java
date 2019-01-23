@@ -19,8 +19,8 @@ public class Borrow {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idborrow;
-	private Date dateborrowed;
-	private Date datereturned;
+	private String dateborrowed;
+	private String datereturned;
 	private int iduser;
 	private int idbook;
 
@@ -32,19 +32,19 @@ public class Borrow {
 		this.idborrow = idborrow;
 	}
 
-	public Date getDateborrowed() {
+	public String getDateborrowed() {
 		return dateborrowed;
 	}
 
-	public void setDateborrowed(Date dateborrowed) {
+	public void setDateborrowed(String dateborrowed) {
 		this.dateborrowed = dateborrowed;
 	}
 
-	public Date getDatereturned() {
+	public String getDatereturned() {
 		return datereturned;
 	}
 
-	public void setDatereturned(Date datereturned) {
+	public void setDatereturned(String datereturned) {
 		this.datereturned = datereturned;
 	}
 
